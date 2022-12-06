@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <title>RoShamBro</title>
 </head>
 <body>
     <p>Hi, I'm your RoShamBro!</p>
     <p>Wanna play a game?</p>
-    <button id="positive">Yes!</button>
+    <button id="positive" onclick="startGame()">Yes!</button>
     <button id="negative" onclick="endGame()">Nah.</button>
-    <p id="rsbResponse"></p>
-    <button id="rock">ROCK!</button>
-    <button id="paper"><i>Paper</i></button>
-    <button id="scissors"><b>S</b>c<b>i</b>s<b>s</b>o<b>r</b>s</button>
+    <p id="rpsResponse"></p>
+    <button id="rock" class="rpsInput">ROCK!</button>
+    <button id="paper" class="rpsInput"><i>Paper</i></button>
+    <button id="scissors" class="rpsInput"><b>S</b>c<b>i</b>s<b>s</b>o<b>r</b>s</button>
 </body>
 </html>

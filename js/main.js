@@ -3,6 +3,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 const options = ["rock", "paper", "scissors", "rock"]
 
 function startGame() {
+  document.getElementById('greeting').style.display = "none";
   document.getElementById('gameInitialize').style.display = "none";
   document.getElementById('rpsInput').style.display = "inline-block";
   document.getElementById('rpsResponse').style.display = "block";

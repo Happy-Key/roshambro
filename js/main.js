@@ -6,6 +6,7 @@ function startGame() {
   document.getElementById('gameInitialize').style.display = "none";
   document.getElementById('rpsInput').style.display = "inline-block";
   document.getElementById('rpsResponse').style.display = "block";
+  }
 }
 
 const endGame = async () => {
@@ -13,7 +14,6 @@ const endGame = async () => {
     await delay(1500);
     location.reload();
   };
-
 function rpsEvaluate(input) {
   let broInput = getRandomInt(1,3);
   if (broInput - input == 1) {rpsLoss(broInput); return;}

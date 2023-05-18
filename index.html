@@ -11,14 +11,18 @@
 </head>
 <body>
     <p id="greeting">Hi, I'm your RoShamBro!</p>
-    <div id="gameInput">
+    <div id="gameInitialize">
         <p>Wanna play a game?</p>
         <button onclick="startGame()">Yes!</button>
         <button onclick="endGame()">Nah.</button>
     </div>
-    <p id="rpsResponse"></p>
-    <button id="rock" class="rpsInput">ROCK!</button>
-    <button id="paper" class="rpsInput"><i>Paper</i></button>
-    <button id="scissors" class="rpsInput"><b>S</b>c<b>i</b>s<b>s</b>o<b>r</b>s</button>
+    <div>
+        <p id="rpsResponse">Great! Let's play some RoShamBo.</p>
+    </div>
+    <div id="rpsInput">
+        <button onclick="rpsEvaluate(0)">ROCK!</button>
+        <button onclick="rpsEvaluate(1)"><i>Paper</i></button>
+        <button onclick="rpsEvaluate(2)"><b>S</b>c<b>i</b>s<b>s</b>o<b>r</b>s</button>
+    </div>
 </body>
 </html>

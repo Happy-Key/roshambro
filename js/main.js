@@ -22,15 +22,15 @@ function rpsEvaluate(input) {
 }
 
 function rpsLoss(broInput) {
-  document.getElementById('rpsResponse').textContent = "You played ${options[broInput-1]} while I played ${options[broInput] which means I win.";
+  document.getElementById('rpsResponse').textContent = `You played ${options[broInput-1]} while I played ${options[broInput]} which means I win.`;
 }
 
 function rpsWin(broInput) {
-  document.getElementById('rpsResponse').textContent = "You played ${options[broInput-1]} while I played ${options[broInput] which means I lose.";
+  document.getElementById('rpsResponse').textContent = `You played ${options[broInput-1]} while I played ${options[broInput]} which means I lose.`;
 }
 
 function rpsDraw(broInput) {
-  document.getElementById('rpsResponse').textContent = "You played ${options[broInput-1]} while I played ${options[broInput] which means it's a draw.";
+  document.getElementById('rpsResponse').textContent = `You played ${options[broInput-1]} while I played ${options[broInput]} which means it's a draw.`;
 }
 
 function getRandomInt(min, max) {

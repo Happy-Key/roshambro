@@ -1,3 +1,7 @@
-.rpsInput {
+#rpsInput {
+    display: none
+}
+
+#rpsResponse {
     display: none
 }

@@ -7,7 +7,6 @@ function startGame() {
   document.getElementById('rpsInput').style.display = "inline-block";
   document.getElementById('rpsResponse').style.display = "block";
   }
-}
 
 const endGame = async () => {
     document.getElementById('rpsResponse').innerHTML = "Welp, guess I'll refresh."

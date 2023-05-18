@@ -10,10 +10,12 @@
     <!--secret pepe you found it :D-->
 </head>
 <body>
-    <p>Hi, I'm your RoShamBro!</p>
-    <p>Wanna play a game?</p>
-    <button id="positive" onclick="startGame()">Yes!</button>
-    <button id="negative" onclick="endGame()">Nah.</button>
+    <p id="greeting">Hi, I'm your RoShamBro!</p>
+    <div id="gameInput">
+        <p>Wanna play a game?</p>
+        <button onclick="startGame()">Yes!</button>
+        <button onclick="endGame()">Nah.</button>
+    </div>
     <p id="rpsResponse"></p>
     <button id="rock" class="rpsInput">ROCK!</button>
     <button id="paper" class="rpsInput"><i>Paper</i></button>

@@ -15,22 +15,22 @@ const endGame = async () => {
   };
 function rpsEvaluate(input) {
   let broInput = getRandomInt(1,3);
-  if (broInput - input == 1) {rpsLoss(broInput); return;}
-  if (broInput - input == 2) {rpsWin(broInput); return;}
-  rpsDraw(broInput);
+  if (broInput - input == 1) {rpsLoss(broInput, input); return;}
+  if (broInput - input == 2) {rpsWin(broInput, input); return;}
+  rpsDraw(broInput, input);
   return;
 }
 
-function rpsLoss(broInput) {
-  document.getElementById('rpsResponse').textContent = `You played ${options[broInput-1]} while I played ${options[broInput]} which means I win.`;
+function rpsLoss(broInput, input) {
+  document.getElementById('rpsResponse').textContent = `You played ${options[input]} while I played ${options[broInput]} which means I win.`;
 }
 
-function rpsWin(broInput) {
-  document.getElementById('rpsResponse').textContent = `You played ${options[broInput+1]} but I played ${options[broInput]} which means I lose.`;
+function rpsWin(broInput, input) {
+  document.getElementById('rpsResponse').textContent = `You played ${options[input]} but I played ${options[broInput]} which means I lose.`;
 }
 
-function rpsDraw(broInput) {
-  document.getElementById('rpsResponse').textContent = `We both played ${options[broInput]} which means it's a draw.`;
+function rpsDraw(broInput, input) {
+  document.getElementById('rpsResponse').textContent = `We both played ${options[input]} which means it's a draw.`;
 }
 
 function getRandomInt(min, max) {

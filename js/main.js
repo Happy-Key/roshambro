@@ -10,7 +10,7 @@ function startGame() {
   }
 
 const endGame = async () => {
-    document.getElementById('rpsResponse').innerHTML = "Welp, guess I'll refresh."
+    document.getElementById('greeting').innerHTML = "Welp, guess I'll refresh."
     await delay(1500);
     location.reload();
   };

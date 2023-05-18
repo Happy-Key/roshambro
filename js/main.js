@@ -17,6 +17,7 @@ function rpsEvaluate(input) {
   let broInput = getRandomInt(1,3);
   if (broInput - input == 1) {rpsLoss(broInput, input); return;}
   if (broInput - input == 2) {rpsWin(broInput, input); return;}
+  if (broInput - input == -1) {rpsWin(broInput, input); return;}
   rpsDraw(broInput, input);
   return;
 }

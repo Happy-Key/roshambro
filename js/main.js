@@ -1,6 +1,6 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-const options[] = ["rock", "paper", "scissors", "rock"]
+const options = ["rock", "paper", "scissors", "rock"]
 
 function startGame() {
   document.getElementById('gameInitialize').style.display = "none";

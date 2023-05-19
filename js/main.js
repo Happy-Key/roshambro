@@ -29,8 +29,8 @@ function rpsEvaluate(input) {
   document.getElementById('rpsInput').style.display = "none";
   if (broInput - input == 1) {rpsLoss(broInput, input); return;}
   if (broInput - input == 2) {rpsWin(broInput, input); return;}
-  if (broInput - input == -1) {rpsWin(input); return;}
-  rpsDraw(broInput, input);
+  if (broInput - input == -1) {rpsWin(broInput, input); return;}
+  rpsDraw(input);
   return;
 }
 

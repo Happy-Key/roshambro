@@ -18,6 +18,7 @@ const endGame = async () => {
 
 function restartGame() {
   document.getElementById('rpsInput').style.display = "inline-block";
+  document.getElementById('playAgain').style.display = "none";
   document.getElementById('broChat').textContent = "Pick your move.";
 }
 

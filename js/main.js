@@ -71,16 +71,18 @@ function streakCalc(latestResult)
   switch(latestResult) {
     case 0:
       if (whatstreak == 0) {currentStreak++;}
+      else {whatstreak = latestResult; currentStreak = 1;}
       break
     case 1:
       if (whatstreak == 1) {currentStreak++;}
+      else {whatstreak = latestResult; currentStreak = 1;}
       break
     case 2:
       if (whatstreak == 2) {currentStreak++;}
+      else {whatstreak = latestResult; currentStreak = 1;}
       break
     default:
-      whatstreak = latestResult;
-      currentStreak = 1;
+      //bro what
   }
   document.getElementById('tempstreakcounter').textContent = `wins:${totalWins}, losses:${totalLosses}, draws:${totalDraws}, streaktype:${whatstreak}, current streak:${currentStreak}`;
 }

@@ -1,15 +1,19 @@
 #rpsInput {
-    display: none
+    display: none;
 }
 
 #rpsResponse {
-    display: none
+    display: none;
 }
 
 #broChat {
-    display: none
+    display: none;
 }
 
 #playAgain {
-    display: none
+    display: none;
+}
+
+.gameScreenChild {
+    flex: 1;
 }

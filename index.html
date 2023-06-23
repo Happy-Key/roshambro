@@ -10,25 +10,35 @@
     <!--secret pepe you found it :D-->
 </head>
 <body>
+    <h1>RoShamBro</h1>
     <p id="greeting">Hi, I'm your RoShamBro!</p>
-    <div id="gameInitialize">
-        <p>Wanna play a game?</p>
-        <button onclick="startGame()">Yes!</button>
-        <button onclick="endGame()">Nah.</button>
+    <div id="gameContainer">
+        <div id="gameInitialize">
+            <p>Wanna play a game?</p>
+            <button onclick="startGame()">Yes!</button>
+            <button onclick="endGame()">Nah.</button>
+        </div>
+        <div>
+            <p id="rpsResponse"></p>
+            <p id="broChat">Great! Let's play some RoShamBo.</p>
+        </div>
+        <div id="rpsInput">
+            <button onclick="rpsEvaluate(0)">ROCK!</button>
+            <button onclick="rpsEvaluate(1)"><i>Paper</i></button>
+            <button onclick="rpsEvaluate(2)"><b>S</b>c<b>i</b>s<b>s</b>o<b>r</b>s</button>
+        </div>
+        <div id="playAgain">
+            <button onclick="restartGame()">Sure.</button>
+            <button onclick="endGame()">I'm good.</button>
+        </div>
     </div>
-    <div>
-        <p id="rpsResponse"></p>
-        <p id="broChat">Great! Let's play some RoShamBo.</p>
-    </div>
-    <div id="rpsInput">
-        <button onclick="rpsEvaluate(0)">ROCK!</button>
-        <button onclick="rpsEvaluate(1)"><i>Paper</i></button>
-        <button onclick="rpsEvaluate(2)"><b>S</b>c<b>i</b>s<b>s</b>o<b>r</b>s</button>
-        <p id="tempstreakcounter"></p>
-    </div>
-    <div id="playAgain">
-        <button onclick="restartGame()">Sure.</button>
-        <button onclick="endGame()">I'm good.</button>
+    <div id="statsContainer">
+        <p id="winstreakMax"></p>
+        <p id="winstreakCurrent"></p>
+        <p id="wins"></p>
+        <p id="losses"></p>
+        <p id="draws"></p>
+        </p>
     </div>
 </body>
 </html>

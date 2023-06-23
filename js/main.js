@@ -1,6 +1,7 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const options = ["rock", "paper", "scissors", "rock"]
+const wld = ["win", "lose", "draw"]
 
 var gameData = [
   totalWins=0,
@@ -10,8 +11,18 @@ var gameData = [
   losestreakMax=0,
   drawstreakMax=0,
   currentStreak=0,
-  whatstreak=0,
+  streaktype=0,
 ];
+
+const refreshStatsInterval = setInterval(refreshStats, 100);
+
+function refreshStats() {
+  document.getElementById('winstreakMax').innerHTML =  "Best winstreak:" + winstreakMax;
+  document.getElementById('winstreakCurrent').innerHTML = `Current ${wld[streaktype]}streak: ${currentStreak}`;
+  document.getElementById('wins').innerHTML = "Total wins:" + totalWins;
+  document.getElementById('losses').innerHTML = "Total losses:" + totalLosses;
+  document.getElementById('draws').innerHTML = "Total draws:" + totalDraws;
+}
 
 function startGame() {
   document.getElementById('greeting').style.display = "none";
@@ -70,21 +81,20 @@ function streakCalc(latestResult)
 {
   switch(latestResult) {
     case 0:
-      if (whatstreak == 0) {currentStreak++;}
-      else {whatstreak = latestResult; currentStreak = 1;}
+      if (streaktype == 0) {currentStreak++; if (currentStreak > winstreakMax){winstreakMax = currentStreak;}}
+      else {streaktype = latestResult; currentStreak = 1;}
       break
     case 1:
-      if (whatstreak == 1) {currentStreak++;}
-      else {whatstreak = latestResult; currentStreak = 1;}
+      if (streaktype == 1) {currentStreak++; if (currentStreak > losestreakMax){losestreakMax = currentStreak;}}
+      else {streaktype = latestResult; currentStreak = 1;}
       break
     case 2:
-      if (whatstreak == 2) {currentStreak++;}
-      else {whatstreak = latestResult; currentStreak = 1;}
+      if (streaktype == 2) {currentStreak++; if (currentStreak > drawstreakMax){drawstreakMax = currentStreak;}}
+      else {streaktype = latestResult; currentStreak = 1;}
       break
     default:
       //bro what
   }
-  document.getElementById('tempstreakcounter').textContent = `wins:${totalWins}, losses:${totalLosses}, draws:${totalDraws}, streaktype:${whatstreak}, current streak:${currentStreak}`;
 }
 
 function getRandomInt(min, max) {

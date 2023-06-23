@@ -19,6 +19,11 @@
 }
 
 .gameScreenChild {
+    border-radius: 25px;
     flex: 1;
     border: 4px solid black;
+}
+
+.gameScreenChild:first-child {
+    margin-right: 20px;
 }

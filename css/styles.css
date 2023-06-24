@@ -11,6 +11,8 @@
 #tabBorder {
     height: 2px;
     position: relative;
+    background-color: black;
+    margin-top: 5px;
 }
 
 .tab {
@@ -19,6 +21,7 @@
 
 .gameScreenChild {
     border-radius: 25px;
+    margin: 10px;
     padding: 10px;
     flex: 1;
     border: 4px solid black;

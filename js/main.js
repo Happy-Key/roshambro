@@ -1,4 +1,8 @@
+import { createEventListeners } from "./eventListeners";
+
 const delay = ms => new Promise(res => setTimeout(res, ms));
+
+createEventListeners();
 
 const options = ["rock", "paper", "scissors", "rock"]
 const wld = ["win", "lose", "draw"]
@@ -30,7 +34,7 @@ function restartGame() {
   document.getElementById('broChat').textContent = "Pick your move.";
 }
 
-function rpsEvaluate(input) {
+export const rpsEvaluate = (input)  => {
   let broInput = getRandomInt(1,3);
   document.getElementById('playAgain').style.display = "block";
   document.getElementById('rpsInput').style.display = "none";

@@ -24,20 +24,6 @@ function refreshStats() {
   document.getElementById('draws').innerHTML = "Total draws:" + totalDraws;
 }
 
-function startGame() {
-  document.getElementById('greeting').style.display = "none";
-  document.getElementById('gameInitialize').style.display = "none";
-  document.getElementById('rpsInput').style.display = "inline-block";
-  document.getElementById('broChat').style.display = "block";
-}
-
-const endGame = async () => {
-  document.getElementById('greeting').style.display = "block";
-  document.getElementById('greeting').innerHTML = "Alright, guess I'll refresh."
-  await delay(1500);
-  location.reload();
-};
-
 function restartGame() {
   document.getElementById('rpsInput').style.display = "inline-block";
   document.getElementById('playAgain').style.display = "none";

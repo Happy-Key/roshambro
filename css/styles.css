@@ -1,17 +1,15 @@
-#rpsInput {
-    display: none;
-}
-
 #rpsResponse {
-    display: none;
-}
-
-#broChat {
     display: none;
 }
 
 #playAgain {
     display: none;
+}
+
+#navBar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .tab {

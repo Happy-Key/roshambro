@@ -11,17 +11,18 @@
 </head>
 <body>
     <h1>RoShamBro</h1>
-    <p id="greeting">Hi, I'm your RoShamBro!</p>
+    <div>
+        <p id="greeting">Hi, I'm your RoShamBro!</p>
+        <nav id="navBar">
+            <button id="mainTab">Main</button>
+            <button id="settingsTab">Settings</button>
+        </nav>
+    </div>
     <div class="tab" id="gameScreen">
         <div class="gameScreenChild" id="gameContainer">
-            <div id="gameInitialize">
-                <p>Wanna play a game?</p>
-                <button onclick="startGame()">Yes!</button>
-                <button onclick="endGame()">Nah.</button>
-            </div>
             <div>
                 <p id="rpsResponse"></p>
-                <p id="broChat">Great! Let's play some RoShamBo.</p>
+                <p id="broChat">Let's play some RoShamBo.</p>
             </div>
             <div id="rpsInput">
                 <button onclick="rpsEvaluate(0)">ROCK!</button>

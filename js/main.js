@@ -2,10 +2,10 @@ import { createEventListeners } from "./eventListeners";
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-createEventListeners();
-
 const options = ["rock", "paper", "scissors", "rock"]
 const wld = ["win", "lose", "draw"]
+
+createEventListeners();
 
 var gameData = [
   totalWins=0,
@@ -18,7 +18,7 @@ var gameData = [
   streaktype=0,
 ];
 
-const refreshStatsInterval = setInterval(refreshStats, 100);
+export const refreshStatsInterval = setInterval(refreshStats, 100);
 
 function refreshStats() {
   document.getElementById('winstreakMax').innerHTML =  "Best winstreak:" + winstreakMax;

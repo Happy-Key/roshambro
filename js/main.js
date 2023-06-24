@@ -99,14 +99,14 @@ export function selectTab(name) {
 function hideTabs() {
   let tabs = document.getElementsByClassName("tab");
   for (let i = 0; i < tabs.length; i++) {
-    tabs[i].style.display = none;
+    tabs[i].style.display = "none";
   }
 }
 
 function showTab(name) {
   let tabs = document.getElementsByClassName("tab");
   for (let i = 0; i < tabs.length; i++) {
-    if (name == tabs[i].id) { tabs[i].style.display = block;}
+    if (name == tabs[i].id) { tabs[i].style.display = "block";}
   }
 }
 

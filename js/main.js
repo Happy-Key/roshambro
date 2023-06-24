@@ -1,4 +1,4 @@
-const { createEventListeners } = require('./eventListeners.js');
+import { createEventListeners } from "./eventListeners.js";
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 

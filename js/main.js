@@ -28,13 +28,13 @@ function refreshStats() {
   document.getElementById('draws').innerHTML = "Total draws:" + totalDraws;
 }
 
-function restartGame() {
+export function restartGame() {
   document.getElementById('rpsInput').style.display = "inline-block";
   document.getElementById('playAgain').style.display = "none";
   document.getElementById('broChat').textContent = "Pick your move.";
 }
 
-export const rpsEvaluate = (input)  => {
+export function rpsEvaluate(input) {
   let broInput = getRandomInt(1,3);
   document.getElementById('playAgain').style.display = "block";
   document.getElementById('rpsInput').style.display = "none";

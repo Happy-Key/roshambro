@@ -7,15 +7,24 @@ const wld = ["win", "lose", "draw"]
 
 createEventListeners();
 
+var totalWins = 0;
+var totalLosses = 0;
+var totalDraws = 0;
+var winstreakMax = 0;
+var losestreakMax = 0;
+var drawstreakMax = 0;
+var currentStreak = 0;
+var streaktype = 0;
+
 var gameData = [
-  totalWins=0,
-  totalLosses=0,
-  totalDraws=0,
-  winstreakMax=0,
-  losestreakMax=0,
-  drawstreakMax=0,
-  currentStreak=0,
-  streaktype=0,
+  totalWins,
+  totalLosses,
+  totalDraws,
+  winstreakMax,
+  losestreakMax,
+  drawstreakMax,
+  currentStreak,
+  streaktype,
 ];
 
 export const refreshStatsInterval = setInterval(refreshStats, 100);

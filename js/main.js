@@ -1,4 +1,4 @@
-import { createEventListeners } from "./eventListeners";
+import { createEventListeners } from "./eventListeners.js";
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 

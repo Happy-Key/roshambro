@@ -8,6 +8,11 @@
     width: 100%;
 }
 
+#tabBorder {
+    height: 2px;
+    position: relative;
+}
+
 .tab {
     display: flex;
 }

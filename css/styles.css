@@ -12,7 +12,15 @@
     height: 2px;
     position: relative;
     background-color: black;
-    margin-top: 5px;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.tabButton {
+    z-index: 0;
+    padding: 5px;
+    margin-bottom: -5px;
+    margin-right: 15px;
 }
 
 .tab {

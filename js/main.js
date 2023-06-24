@@ -72,8 +72,7 @@ function rpsDraw(input) {
   streakCalc(2);
 }
 
-function streakCalc(latestResult)
-{
+function streakCalc(latestResult) {
   switch(latestResult) {
     case 0:
       if (streaktype == 0) {currentStreak++; if (currentStreak > winstreakMax){winstreakMax = currentStreak;}}
@@ -89,6 +88,25 @@ function streakCalc(latestResult)
       break
     default:
       //bro what
+  }
+}
+
+export function selectTab(name) {
+  hideTabs();
+  showTab(name);
+}
+
+function hideTabs() {
+  let tabs = document.getElementsByClassName("tab");
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].style.display = none;
+  }
+}
+
+function showTab(name) {
+  let tabs = document.getElementsByClassName("tab");
+  for (let i = 0; i < tabs.length; i++) {
+    if (name == tabs[i].id) { tabs[i].style.display = block;}
   }
 }
 

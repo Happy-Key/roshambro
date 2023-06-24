@@ -1,4 +1,4 @@
-import {rpsEvaluate, restartGame} from '/main.js'
+const {rpsEvaluate, restartGame} = require('./main.js');
 
 export const createEventListeners = () => {
     document.getElementById('rock').addEventListener('click',() => rpsEvaluate(0));

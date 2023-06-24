@@ -32,7 +32,6 @@ function restartGame() {
 
 function rpsEvaluate(input) {
   let broInput = getRandomInt(1,3);
-  document.getElementById('rpsResponse').style.display = "block";
   document.getElementById('playAgain').style.display = "block";
   document.getElementById('rpsInput').style.display = "none";
   if (broInput - input == 1) {rpsLoss(broInput, input); return;}
@@ -44,21 +43,18 @@ function rpsEvaluate(input) {
 
 function rpsLoss(broInput, input) {
   document.getElementById('rpsResponse').textContent = `You played ${options[input]} while I played ${options[broInput]} which means you lose.`;
-  document.getElementById('broChat').textContent = "Would you like to play again?";
   totalLosses += 1;
   streakCalc(1);
 }
 
 function rpsWin(broInput, input) {
   document.getElementById('rpsResponse').textContent = `You played ${options[input]} but I played ${options[broInput]} which means you win!`;
-  document.getElementById('broChat').textContent = "Would you like to play again?";
   totalWins += 1;
   streakCalc(0);
 }
 
 function rpsDraw(input) {
   document.getElementById('rpsResponse').textContent = `We both played ${options[input]} which means it's a draw.`;
-  document.getElementById('broChat').textContent = "Would you like to play again?";
   totalDraws += 1;
   streakCalc(2);
 }

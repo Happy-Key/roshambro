@@ -14,15 +14,16 @@
     <div>
         <p id="greeting">Hi, I'm your RoShamBro!</p>
         <nav id="navBar">
-            <button id="mainTab">Main</button>
-            <button id="settingsTab">Settings</button>
+            <button id="mainTab" style="padding: 5px">Main</button>
+            <button id="settingsTab" style="padding: 5px">Settings</button>
         </nav>
     </div>
+    <div id="tabBorder"></div>
     <div class="tab" id="gameScreen">
         <div class="gameScreenChild" id="gameContainer">
             <div>
                 <p id="rpsResponse">Let's play some RoShamBo.</p>
-                <p>---------- Choose ----------</p>
+                <p>---------- CHOOSE ----------</p>
             </div>
             <div id="rpsInput">
                 <button onclick="rpsEvaluate(0)">ROCK!</button>
@@ -30,7 +31,7 @@
                 <button onclick="rpsEvaluate(2)"><b>S</b>c<b>i</b>s<b>s</b>o<b>r</b>s</button>
             </div>
             <div id="playAgain">
-                <button onclick="restartGame()">Sure.</button>
+                <button onclick="restartGame()">Rematch!</button>
             </div>
         </div>
         <div class="gameScreenChild" id="statsContainer">

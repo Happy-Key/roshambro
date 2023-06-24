@@ -5,6 +5,4 @@ export const createEventListeners = () => {
     document.getElementById('paper').addEventListener('click',() => rpsEvaluate(1));
     document.getElementById('scissors').addEventListener('click',() => rpsEvaluate(2));
     document.getElementById('restartRPS').addEventListener('click',() => restartGame());
-    document.getElementById('gameTab').addEventListener('click',() => restartGame());
-    document.getElementById('settingsTab').addEventListener('click',() => restartGame());
 }

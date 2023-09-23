@@ -7,4 +7,5 @@ export const createEventListeners = () => {
     document.getElementById('restartRPS').addEventListener('click',() => restartGame());
     document.getElementById('mainTabButton').addEventListener('click',() => selectTab("mainTab"));
     document.getElementById('settingsTabButton').addEventListener('click',() => selectTab("settingsTab"));
+    document.addEventListener('DOMContentLoaded', () => selectTab("mainTab");
 }
